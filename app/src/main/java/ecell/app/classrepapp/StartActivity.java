@@ -17,6 +17,9 @@ import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class StartActivity extends AppCompatActivity {
 
     // Checking the Internet Connection
@@ -66,10 +69,18 @@ public class StartActivity extends AppCompatActivity {
                     // If already login than have the code for update UI here
                     // Basically redirecting them directly to Dashboard UI
 
-
-                    // If not login then send them to new Activity LR Activity
-                    startActivity(new Intent(StartActivity.this, LrActivity.class));
-                    finish();
+                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                    if(user != null)
+                    {
+                        startActivity(new Intent(StartActivity.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK));
+                        finish();
+                    }
+                    else
+                    {
+                        // If not login then send them to new Activity LR Activity
+                        startActivity(new Intent(StartActivity.this, LrActivity.class));
+                        finish();
+                    }
                 }
             },  5000);
 

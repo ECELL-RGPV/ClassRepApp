@@ -12,7 +12,6 @@ public class LrActivity extends AppCompatActivity {
     public void loginRedirect(View view)
     {
         startActivity(new Intent(LrActivity.this, LogincrActivity.class));
-        finish();
     }
 
     public void regRedirect(View view)

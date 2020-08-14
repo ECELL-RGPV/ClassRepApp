@@ -6,9 +6,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 public class MainActivity extends AppCompatActivity {
+
+    public TextView nameText;
+    public FirebaseUser user;
 
     public void addreg(View view)
     {
@@ -28,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
     public void logout(View view)
     {
-        Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
+        FirebaseAuth.getInstance().signOut();
+        Toast.makeText(MainActivity.this, "Logout Success", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(MainActivity.this, LrActivity.class));
+        finish();
     }
 
     public void exitfunc(View view)
@@ -47,5 +57,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        nameText = (TextView) findViewById(R.id.nameText);
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null)
+        {
+            String email = user.getEmail();
+            String name = email.substring(0,email.indexOf("@"));
+            nameText.setText("Hello, "+ name);
+        }
     }
 }
