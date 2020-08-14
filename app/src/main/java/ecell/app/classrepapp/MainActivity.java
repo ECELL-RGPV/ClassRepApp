@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
         {
             String email = user.getEmail();
             String name = email.substring(0,email.indexOf("@"));
-            nameText.setText("Hello, "+ name);
+            nameText.setText("Hello, "+ name + "\nYOUR DASHBOARD");
         }
     }
 }

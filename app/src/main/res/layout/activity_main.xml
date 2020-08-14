@@ -24,7 +24,6 @@
         android:layout_marginTop="20dp"
         android:fontFamily="@font/allerta"
         android:gravity="center"
-        android:text="Hello, Ayush"
         android:textAlignment="center"
         android:textAllCaps="false"
         android:textColor="@color/colorDark"
@@ -59,7 +58,7 @@
                 android:layout_margin="10dp"
                 android:background="@android:color/holo_orange_light"
                 android:onClick="addreg"
-                app:cardBackgroundColor="#FFD600"
+                app:cardBackgroundColor="#FADA34"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
@@ -102,7 +101,7 @@
                 android:layout_margin="10dp"
                 android:background="@color/colorGreen"
                 android:onClick="compreg"
-                app:cardBackgroundColor="#D62273"
+                app:cardBackgroundColor="#FA5DA3"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
@@ -155,7 +154,7 @@
                 android:layout_margin="10dp"
                 android:background="#FFD600"
                 android:onClick="helpact"
-                app:cardBackgroundColor="#00C853"
+                app:cardBackgroundColor="#6F81FF"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
@@ -246,7 +245,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="#FFD600"
-                app:cardBackgroundColor="#DF2424"
+                app:cardBackgroundColor="#FF6348"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
@@ -262,8 +261,8 @@
                         android:layout_height="75dp"
                         android:layout_gravity="bottom"
                         android:foregroundGravity="bottom"
-                        android:scaleY="1.2"
                         android:scaleX="1.2"
+                        android:scaleY="1.2"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
                         app:lottie_autoPlay="true"
@@ -310,7 +309,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/colorGreen"
-                app:cardBackgroundColor="#77EDFF"
+                app:cardBackgroundColor="#96F1FF"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
