@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "431764528033",
+    "firebase_url": "https://classrep-a7dab.firebaseio.com",
+    "project_id": "classrep-a7dab",
+    "storage_bucket": "classrep-a7dab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:431764528033:android:0094122e62e094986589e0",
+        "android_client_info": {
+          "package_name": "ecell.app.classrepapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "431764528033-lkbo0p176u09c35q7ddj77rg4mtv132p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyATGWuMib53UceNgJoRH1lRLSpHKb24jzU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "431764528033-lkbo0p176u09c35q7ddj77rg4mtv132p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

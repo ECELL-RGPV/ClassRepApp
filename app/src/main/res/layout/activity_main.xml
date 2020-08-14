@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/dashboardback"
-    tools:context=".DashboardActivity">
+    tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -51,11 +51,13 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/addreg"
                 android:layout_width="170dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:background="@android:color/holo_orange_light"
+                android:onClick="addreg"
                 app:cardBackgroundColor="#FFD600"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
@@ -92,11 +94,13 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/compreg"
                 android:layout_width="170dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:background="@color/colorGreen"
+                android:onClick="compreg"
                 app:cardBackgroundColor="#D62273"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
@@ -143,11 +147,13 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/helpact"
                 android:layout_width="170dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:background="#FFD600"
+                android:onClick="helpact"
                 app:cardBackgroundColor="#00C853"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
@@ -201,11 +207,11 @@
                     android:layout_height="100dp"
                     android:layout_margin="20dp"
                     android:alpha="1"
-                    android:fontFamily="@font/allerta"
+                    android:fontFamily="@font/imprima"
                     android:text="TOTAL REGs\n48"
                     android:textAlignment="center"
                     android:textColor="#FFD600"
-                    android:textSize="21sp"
+                    android:textSize="24sp"
                     android:textStyle="bold" />
 
                 <com.airbnb.lottie.LottieAnimationView
@@ -241,7 +247,58 @@
                 android:background="#FFD600"
                 app:cardBackgroundColor="#DF2424"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp" />
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/bye"
+                        android:layout_width="130dp"
+                        android:layout_height="75dp"
+                        android:layout_gravity="bottom"
+                        android:foregroundGravity="bottom"
+                        android:scaleY="1.2"
+                        android:scaleX="1.2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/byelottie" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/logoutcard"
+                        android:layout_width="180dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="logout"
+                        app:cardBackgroundColor="#F3000000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/allerta"
+                            android:gravity="center"
+                            android:text="LOGOUT !!"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="#FFD600"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="360dp"
@@ -252,9 +309,59 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:background="@color/colorGreen"
-                app:cardBackgroundColor="#E67E30"
+                app:cardBackgroundColor="#77EDFF"
                 app:cardCornerRadius="20dp"
-                app:cardElevation="10dp" />
+                app:cardElevation="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/exitcard"
+                        android:layout_width="180dp"
+                        android:layout_height="80dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:onClick="exitfunc"
+                        app:cardBackgroundColor="#F3000000"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fontFamily="@font/allerta"
+                            android:gravity="center"
+                            android:text="EXIT APP"
+                            android:textAlignment="center"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                            android:textColor="#FFD600"
+                            android:textStyle="bold" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/byebye"
+                        android:layout_width="130dp"
+                        android:layout_height="80dp"
+                        android:scaleX="1.6"
+                        android:scaleY="1.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/byebye" />
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
 
         </LinearLayout>
 

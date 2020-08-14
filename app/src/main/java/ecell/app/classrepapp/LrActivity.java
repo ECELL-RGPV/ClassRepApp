@@ -6,14 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageView;
 
 public class LrActivity extends AppCompatActivity {
 
     public void loginRedirect(View view)
     {
-        startActivity(new Intent(LrActivity.this, LoginActivity.class));
+        startActivity(new Intent(LrActivity.this, LogincrActivity.class));
+        finish();
     }
 
     public void regRedirect(View view)
