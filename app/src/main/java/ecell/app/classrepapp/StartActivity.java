@@ -14,6 +14,8 @@ import android.provider.SyncStateContract;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -55,6 +57,8 @@ public class StartActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         if(isOnline())
         {
             new Handler().postDelayed(new Runnable() {
