@@ -2,6 +2,7 @@ package ecell.app.classrepapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -10,10 +11,15 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.tiper.MaterialSpinner;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 
 public class AddActivity extends AppCompatActivity {
 
@@ -29,6 +35,9 @@ public class AddActivity extends AppCompatActivity {
     private TextInputLayout confirmEmail;
     private TextInputLayout phoneNumber;
     public Button regbutton;
+    public FirebaseDatabase database;
+    public FirebaseUser user;
+    public ProgressDialog dialog;
 
 
     private boolean validateFullName() {
@@ -148,6 +157,10 @@ public class AddActivity extends AppCompatActivity {
         confirmEmail = findViewById(R.id.confirmemail);
         phoneNumber = findViewById(R.id.phone);
         regbutton = findViewById(R.id.regbutton);
+        database = FirebaseDatabase.getInstance();
+
+
+//        storedb("a","b","c", "r","t","t","k");
 
         // Branch Spinner
         branchspinner = findViewById(R.id.branch);
@@ -173,9 +186,66 @@ public class AddActivity extends AppCompatActivity {
         regbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if (!validateFullName() || !validateCollege() || !validateEmail() || !validateBranch() || !validateYear() || !validatePhoneNumber() || !validateGender() || !validateConfirmEmail()) {
+                    return;
+                }
+                else
+                {
+                    Toast.makeText(AddActivity.this, "Check", Toast.LENGTH_SHORT).show();
+                    dialog = ProgressDialog.show(AddActivity.this, "",
+                            "Submitting. Please wait...", true);
+                    String e = email.getEditText().getText().toString().trim();
+                    String f = fullName.getEditText().getText().toString().trim();
+                    String c = college.getEditText().getText().toString().trim();
+                    String b = branchspinner.getEditText().getText().toString().trim();
+                    String y = yearspinner.getEditText().getText().toString().trim();
+                    String g = genderspinner.getEditText().getText().toString().trim();
+                    String p = phoneNumber.getEditText().getText().toString().trim();
 
+                    storedb(f,c,e,b,y,g,p);
+                }
             }
         });
 
+    }
+
+    public void storedb(String f, String c, String e, String b, String y, String g, String p) {
+
+        user = FirebaseAuth.getInstance().getCurrentUser();
+        if(user != null)
+        {
+
+            HashMap<String, Object> map = new HashMap<>();
+            map.put("Name", f);
+            map.put("College", c);
+            map.put("Email", e);
+            map.put("Phone", p);
+            map.put("Branch", b);
+            map.put("Year", y);
+            map.put("Gender", g);
+
+/*            HashMap<String, Object> map = new HashMap<>();
+            map.put("Name", "f");
+            map.put("College", "c");
+            map.put("Email", "e");
+            map.put("Phone", "p");
+            map.put("Branch", "b");
+            map.put("Year", "y");
+            map.put("Gender", "g");
+
+            String email = user.getEmail();
+            String crname = email.substring(0,email.indexOf("@"));
+            String phone = p;
+            DatabaseReference myRef = database.getReference();
+            myRef.child("Total").child(crname).child("p").updateChildren(map);*/
+
+
+            String email = user.getEmail();
+            String crname = email.substring(0,email.indexOf("@"));
+            String phone = p;
+            DatabaseReference myRef = database.getReference();
+            myRef.child("Total").child(crname).child(p).updateChildren(map);
+            dialog.dismiss();
+        }
     }
 }

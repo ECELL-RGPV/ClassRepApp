@@ -38,6 +38,7 @@
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="720dp"
+        android:layout_marginBottom="10dp"
         android:gravity="bottom"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
