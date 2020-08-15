@@ -6,5 +6,4 @@
     <color name="colorL2">#fcd307</color>
     <color name="colorL3">#d5daeb</color>
     <color name="colorGreen">#05F283</color>
-    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/colorBlack</color>
 </resources>
