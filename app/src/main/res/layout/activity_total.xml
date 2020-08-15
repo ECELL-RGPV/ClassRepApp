@@ -8,10 +8,13 @@
     tools:context=".TotalActivity">
 
     <ListView
-        android:id="@+id/totalReg"
+        android:id="@+id/regList"
         android:layout_width="391dp"
-        android:layout_height="783dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_height="600dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="188dp"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
