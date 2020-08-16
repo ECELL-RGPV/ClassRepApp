@@ -42,7 +42,8 @@
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="RtlCompat" />
 
 
     <LinearLayout
@@ -209,7 +210,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:background="@color/colorGreen"
-                app:cardBackgroundColor="#F7000000"
+                app:cardBackgroundColor="#2e0088"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
