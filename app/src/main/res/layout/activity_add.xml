@@ -85,7 +85,6 @@
                     app:boxBackgroundColor="@android:color/white"
                     app:boxStrokeColor="@android:color/white"
                     app:errorEnabled="true"
-                    app:errorTextAppearance="@android:color/holo_red_light"
                     app:helperTextTextAppearance="@color/colorBlack">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -104,7 +103,6 @@
                     app:boxBackgroundColor="@android:color/white"
                     app:boxStrokeColor="@android:color/white"
                     app:errorEnabled="true"
-                    app:errorTextAppearance="@android:color/holo_red_light"
                     app:helperTextTextAppearance="@color/colorBlack">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -123,7 +121,6 @@
                     app:boxBackgroundColor="@android:color/white"
                     app:boxStrokeColor="@android:color/white"
                     app:errorEnabled="true"
-                    app:errorTextAppearance="@android:color/holo_red_light"
                     app:helperTextTextAppearance="@color/colorBlack">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -142,7 +139,6 @@
                     app:boxBackgroundColor="@android:color/white"
                     app:boxStrokeColor="@android:color/white"
                     app:errorEnabled="true"
-                    app:errorTextAppearance="@android:color/holo_red_light"
                     app:helperTextTextAppearance="@color/colorBlack">
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -161,7 +157,6 @@
                     app:boxBackgroundColor="@android:color/white"
                     app:boxStrokeColor="@android:color/white"
                     app:errorEnabled="true"
-                    app:errorTextAppearance="@android:color/holo_red_light"
                     app:helperTextTextAppearance="@color/colorBlack">
 
                     <com.google.android.material.textfield.TextInputEditText
