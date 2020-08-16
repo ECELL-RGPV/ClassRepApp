@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -35,7 +36,7 @@ public class AddActivity extends AppCompatActivity {
     private TextInputLayout email;
     private TextInputLayout confirmEmail;
     private TextInputLayout phoneNumber;
-    public Button regbutton;
+    public LottieAnimationView regbutton;
     public FirebaseDatabase database;
     public FirebaseUser user;
     public ProgressDialog dialog;

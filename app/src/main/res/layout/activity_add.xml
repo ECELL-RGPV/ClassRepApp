@@ -13,9 +13,8 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="15dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
         app:lottie_rawRes="@raw/calender" />
@@ -25,7 +24,6 @@
         android:layout_width="250dp"
         android:layout_height="70dp"
         android:layout_marginStart="120dp"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/allerta"
         android:gravity="center"
         android:text="ADD STUDENT DETAILS"
@@ -33,14 +31,14 @@
         android:textColor="#FFF614"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="370dp"
-        android:layout_height="620dp"
-        android:layout_marginTop="80dp"
+        android:layout_height="575dp"
+        android:layout_marginTop="70dp"
         app:cardBackgroundColor="#FFFFFF"
         app:cardCornerRadius="25dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -56,7 +54,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/formcard"
                 android:layout_width="360dp"
-                android:layout_height="610dp"
+                android:layout_height="565dp"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="5dp"
                 android:elevation="10dp"
@@ -88,11 +86,11 @@
                             android:id="@+id/fullname"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="70dp"
-                            app:boxCornerRadiusTopEnd="15dp"
-                            app:boxCornerRadiusTopStart="15dp"
+                            android:layout_height="65dp"
                             android:textColorHint="@color/colorBlack"
                             app:boxBackgroundColor="@android:color/white"
+                            app:boxCornerRadiusTopEnd="15dp"
+                            app:boxCornerRadiusTopStart="15dp"
                             app:boxStrokeColor="@android:color/white"
                             app:errorEnabled="true"
                             app:helperTextTextAppearance="@color/colorBlack">
@@ -108,7 +106,7 @@
                             android:id="@+id/college"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="70dp"
+                            android:layout_height="65dp"
                             android:textColorHint="@color/colorBlack"
                             app:boxBackgroundColor="@android:color/white"
                             app:boxStrokeColor="@android:color/white"
@@ -126,7 +124,7 @@
                             android:id="@+id/email"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="70dp"
+                            android:layout_height="65dp"
                             android:textColorHint="@color/colorBlack"
                             app:boxBackgroundColor="@android:color/white"
                             app:boxStrokeColor="@android:color/white"
@@ -144,7 +142,7 @@
                             android:id="@+id/confirmemail"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="70dp"
+                            android:layout_height="65dp"
                             android:textColorHint="@color/colorBlack"
                             app:boxBackgroundColor="@android:color/white"
                             app:boxStrokeColor="@android:color/white"
@@ -162,7 +160,7 @@
                             android:id="@+id/phone"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="70dp"
+                            android:layout_height="65dp"
                             android:textColorHint="@color/colorBlack"
                             app:boxBackgroundColor="@android:color/white"
                             app:boxStrokeColor="@android:color/white"
@@ -180,7 +178,7 @@
                             android:id="@+id/year"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="65dp"
                             android:hint="Year"
                             android:textColorHint="@color/colorBlack"
                             app:boxBackgroundColor="@android:color/white"
@@ -192,7 +190,7 @@
                             android:id="@+id/branch"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="65dp"
                             android:hint="Branch"
                             android:textColorHint="@color/colorBlack"
                             app:boxBackgroundColor="@android:color/white"
@@ -204,7 +202,7 @@
                             android:id="@+id/gender"
                             style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="65dp"
                             android:hint="Gender"
                             android:textColorHint="@color/colorBlack"
                             app:boxBackgroundColor="@android:color/white"
@@ -230,21 +228,54 @@
         </FrameLayout>
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/regbutton"
-        android:layout_width="330dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/lrbuttons"
-        android:drawableRight="@mipmap/plusnew"
-        android:fontFamily="@font/allerta"
-        android:text="REGISTER"
-        android:textColor="#FFF614"
-        android:textSize="27sp"
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="370dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView" />
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/regbutton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:scaleX="1.3"
+            android:scaleY="1.1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/submit" />
+
+        <TextView
+            android:id="@+id/submitbuttonText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="5dp"
+            android:fontFamily="@font/poppins_semibold"
+            android:gravity="center"
+            android:text="SUBMIT"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:text="* Kindly, Fill all the details correctly.\nApp Development Department, E-CELL RGPV"
+        android:textAlignment="textEnd"
+        android:textColor="#D50000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
