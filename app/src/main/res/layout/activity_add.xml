@@ -48,175 +48,186 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/formcard"
-            android:layout_width="360dp"
-            android:layout_height="610dp"
-            android:layout_marginLeft="5dp"
-            android:layout_marginTop="5dp"
-            android:elevation="10dp"
-            android:foregroundGravity="center_horizontal"
-            app:cardBackgroundColor="#000000"
-            app:cardCornerRadius="25dp"
-            app:cardElevation="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/cardbg">
 
-            <LinearLayout
-                android:layout_width="320dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="25dp"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/formcard"
+                android:layout_width="360dp"
+                android:layout_height="610dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
                 android:elevation="10dp"
-                android:foregroundGravity="center_vertical|center_horizontal"
-                android:orientation="vertical">
+                android:foregroundGravity="center_horizontal"
+                app:cardBackgroundColor="#000000"
+                app:cardCornerRadius="25dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/fullname"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                <FrameLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    app:boxCornerRadiusTopEnd="15dp"
-                    app:boxCornerRadiusTopStart="15dp"
-                    android:textColorHint="@color/colorBlack"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:boxStrokeColor="@android:color/white"
-                    app:errorEnabled="true"
-                    app:helperTextTextAppearance="@color/colorBlack">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/cardbginverted">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
+                    <LinearLayout
+                        android:layout_width="320dp"
                         android:layout_height="wrap_content"
-                        android:hint="Full Name"
-                        android:textColorHint="@color/colorBlack" />
-                </com.google.android.material.textfield.TextInputLayout>
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="25dp"
+                        android:elevation="10dp"
+                        android:foregroundGravity="center_vertical|center_horizontal"
+                        android:orientation="vertical">
 
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/college"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:textColorHint="@color/colorBlack"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:boxStrokeColor="@android:color/white"
-                    app:errorEnabled="true"
-                    app:helperTextTextAppearance="@color/colorBlack">
 
-                    <com.google.android.material.textfield.TextInputEditText
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/fullname"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            app:boxCornerRadiusTopEnd="15dp"
+                            app:boxCornerRadiusTopStart="15dp"
+                            android:textColorHint="@color/colorBlack"
+                            app:boxBackgroundColor="@android:color/white"
+                            app:boxStrokeColor="@android:color/white"
+                            app:errorEnabled="true"
+                            app:helperTextTextAppearance="@color/colorBlack">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Full Name"
+                                android:textColorHint="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/college"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:textColorHint="@color/colorBlack"
+                            app:boxBackgroundColor="@android:color/white"
+                            app:boxStrokeColor="@android:color/white"
+                            app:errorEnabled="true"
+                            app:helperTextTextAppearance="@color/colorBlack">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="College"
+                                android:textColorHint="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/email"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:textColorHint="@color/colorBlack"
+                            app:boxBackgroundColor="@android:color/white"
+                            app:boxStrokeColor="@android:color/white"
+                            app:errorEnabled="true"
+                            app:helperTextTextAppearance="@color/colorBlack">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Email Id"
+                                android:textColorHint="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/confirmemail"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:textColorHint="@color/colorBlack"
+                            app:boxBackgroundColor="@android:color/white"
+                            app:boxStrokeColor="@android:color/white"
+                            app:errorEnabled="true"
+                            app:helperTextTextAppearance="@color/colorBlack">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Confirm Email Id"
+                                android:textColorHint="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/phone"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:textColorHint="@color/colorBlack"
+                            app:boxBackgroundColor="@android:color/white"
+                            app:boxStrokeColor="@android:color/white"
+                            app:errorEnabled="true"
+                            app:helperTextTextAppearance="@color/colorBlack">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Phone Number"
+                                android:textColorHint="@color/colorBlack" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.tiper.MaterialSpinner
+                            android:id="@+id/year"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Year"
+                            android:textColorHint="@color/colorBlack"
+                            app:boxBackgroundColor="@android:color/white"
+                            app:boxStrokeColor="@android:color/white"
+                            app:helperTextTextAppearance="@color/colorBlack"
+                            app:spinnerMode="dialog" />
+
+                        <com.tiper.MaterialSpinner
+                            android:id="@+id/branch"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Branch"
+                            android:textColorHint="@color/colorBlack"
+                            app:boxBackgroundColor="@android:color/white"
+                            app:boxStrokeColor="@android:color/white"
+                            app:helperTextTextAppearance="@color/colorBlack"
+                            app:spinnerMode="dialog" />
+
+                        <com.tiper.MaterialSpinner
+                            android:id="@+id/gender"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="Gender"
+                            android:textColorHint="@color/colorBlack"
+                            app:boxBackgroundColor="@android:color/white"
+                            app:boxCornerRadiusBottomEnd="15dp"
+                            app:boxCornerRadiusBottomStart="15dp"
+                            app:boxStrokeColor="@android:color/white"
+                            app:helperTextTextAppearance="@color/colorBlack"
+                            app:spinnerMode="dialog" />
+                    </LinearLayout>
+
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:id="@+id/loginanim"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="College"
-                        android:textColorHint="@color/colorBlack" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/email"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:textColorHint="@color/colorBlack"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:boxStrokeColor="@android:color/white"
-                    app:errorEnabled="true"
-                    app:helperTextTextAppearance="@color/colorBlack">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Email Id"
-                        android:textColorHint="@color/colorBlack" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/confirmemail"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:textColorHint="@color/colorBlack"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:boxStrokeColor="@android:color/white"
-                    app:errorEnabled="true"
-                    app:helperTextTextAppearance="@color/colorBlack">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Confirm Email Id"
-                        android:textColorHint="@color/colorBlack" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/phone"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:textColorHint="@color/colorBlack"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:boxStrokeColor="@android:color/white"
-                    app:errorEnabled="true"
-                    app:helperTextTextAppearance="@color/colorBlack">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="Phone Number"
-                        android:textColorHint="@color/colorBlack" />
-                </com.google.android.material.textfield.TextInputLayout>
-
-                <com.tiper.MaterialSpinner
-                    android:id="@+id/year"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Year"
-                    android:textColorHint="@color/colorBlack"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:boxStrokeColor="@android:color/white"
-                    app:helperTextTextAppearance="@color/colorBlack"
-                    app:spinnerMode="dialog" />
-
-                <com.tiper.MaterialSpinner
-                    android:id="@+id/branch"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Branch"
-                    android:textColorHint="@color/colorBlack"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:boxStrokeColor="@android:color/white"
-                    app:helperTextTextAppearance="@color/colorBlack"
-                    app:spinnerMode="dialog" />
-
-                <com.tiper.MaterialSpinner
-                    android:id="@+id/gender"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.FilledBox"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Gender"
-                    android:textColorHint="@color/colorBlack"
-                    app:boxBackgroundColor="@android:color/white"
-                    app:boxCornerRadiusBottomEnd="15dp"
-                    app:boxCornerRadiusBottomStart="15dp"
-                    app:boxStrokeColor="@android:color/white"
-                    app:helperTextTextAppearance="@color/colorBlack"
-                    app:spinnerMode="dialog" />
-            </LinearLayout>
-
-            <com.airbnb.lottie.LottieAnimationView
-                android:id="@+id/loginanim"
-                android:layout_width="match_parent"
-                android:layout_height="80dp"
-                android:layout_gravity="bottom"
-                android:scaleX="2"
-                android:scaleY="2.5"
-                app:lottie_autoPlay="true"
-                app:lottie_loop="true"
-                app:lottie_rawRes="@raw/waves" />
-
-        </androidx.cardview.widget.CardView>
+                        android:layout_height="80dp"
+                        android:layout_gravity="bottom"
+                        android:scaleX="2"
+                        android:scaleY="2.5"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_rawRes="@raw/waves" />
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
     </androidx.cardview.widget.CardView>
 
     <Button

@@ -3,6 +3,7 @@ package ecell.app.classrepapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -26,6 +27,7 @@ public class LogincrActivity extends AppCompatActivity {
     private TextInputLayout username, password;
     private Button loginButton;
     private FirebaseAuth mAuth;
+    public ProgressDialog dialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class LogincrActivity extends AppCompatActivity {
         setContentView(R.layout.activity_logincr);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        loginButton = (Button) findViewById(R.id.loginButton);
+        loginButton = findViewById(R.id.loginButton);
         mAuth = FirebaseAuth.getInstance();
         username = findViewById(R.id.username);
         password = findViewById(R.id.password);
@@ -49,9 +51,11 @@ public class LogincrActivity extends AppCompatActivity {
                 {
                     Toast.makeText(LogincrActivity.this, "Kindly, Fill in details correctly", Toast.LENGTH_SHORT).show();
                 }
-                else
-                {
+                else {
+
                     LoginUser(email, passwd);
+                    dialog = ProgressDialog.show(LogincrActivity.this, "",
+                            "E-CELL RGPV says\nLoading. Please wait...", true);
                 }
             }
         });
@@ -65,7 +69,10 @@ public class LogincrActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             FirebaseUser user = mAuth.getCurrentUser();
-                            startActivity(new Intent(LogincrActivity.this, MainActivity.class));
+                            Intent intent = new Intent(LogincrActivity.this, MainActivity.class);
+//                            intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            dialog.dismiss();
+                            startActivity(intent);
                             finish();
                             Toast.makeText(LogincrActivity.this, "Authentication Success.",
                                     Toast.LENGTH_SHORT).show();

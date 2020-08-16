@@ -3,6 +3,7 @@ package ecell.app.classrepapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
@@ -241,11 +242,14 @@ public class AddActivity extends AppCompatActivity {
 
 
             String email = user.getEmail();
-            String crname = email.substring(0,email.indexOf("@"));
+            String crname = email.substring(0, email.indexOf("@"));
             String phone = p;
             DatabaseReference myRef = database.getReference();
             myRef.child("Total").child(crname).child(p).updateChildren(map);
             dialog.dismiss();
+            startActivity(new Intent(AddActivity.this, AddActivity.class));
+            finish();
+
         }
     }
 }
