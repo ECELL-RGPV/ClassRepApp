@@ -8,6 +8,17 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/ecellLogo"
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="35dp"
+        android:elevation="1dp"
+        android:paddingTop="40dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/ecelllogo" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="150dp"
@@ -19,25 +30,25 @@
 
     <TextView
         android:id="@+id/nameText"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="10dp"
         android:fontFamily="@font/allerta"
         android:gravity="center"
-        android:textAlignment="center"
+        android:textAlignment="textEnd"
         android:textAllCaps="false"
         android:textColor="@color/colorDark"
         android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="720dp"
+        android:layout_height="680dp"
         android:layout_marginBottom="10dp"
         android:gravity="bottom"
         android:orientation="vertical"
@@ -82,7 +93,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:fontFamily="@font/allerta"
+                        android:fontFamily="@font/signika"
                         android:gravity="center"
                         android:text="ADD\nSTUDENT\nREGISTRATION"
                         android:textAlignment="center"
@@ -127,7 +138,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:fontFamily="@font/allerta"
+                        android:fontFamily="@font/signika"
                         android:gravity="center"
                         android:text="COMPLETED\nREGISTRATIONS\nLIST"
                         android:textAlignment="center"
@@ -180,7 +191,7 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
-                        android:fontFamily="@font/allerta"
+                        android:fontFamily="@font/signika"
                         android:gravity="center"
                         android:text="CONTACT\nUS ON\nHELP DESK"
                         android:textAlignment="center"
@@ -198,7 +209,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:background="@color/colorGreen"
-                app:cardBackgroundColor="#D5000000"
+                app:cardBackgroundColor="#F7000000"
                 app:cardCornerRadius="20dp"
                 app:cardElevation="10dp">
 
@@ -208,8 +219,8 @@
                     android:layout_height="100dp"
                     android:layout_margin="20dp"
                     android:alpha="1"
-                    android:fontFamily="@font/imprima"
-                    android:text="TOTAL REGs\n48"
+                    android:fontFamily="@font/signika"
+                    android:text="TOTAL REGs"
                     android:textAlignment="center"
                     android:textColor="#FFD600"
                     android:textSize="24sp"
@@ -287,7 +298,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:fontFamily="@font/allerta"
+                            android:fontFamily="@font/signika"
                             android:gravity="center"
                             android:text="LOGOUT !!"
                             android:textAlignment="center"
@@ -337,7 +348,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:fontFamily="@font/allerta"
+                            android:fontFamily="@font/signika"
                             android:gravity="center"
                             android:text="EXIT APP"
                             android:textAlignment="center"

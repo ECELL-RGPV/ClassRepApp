@@ -24,8 +24,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="380dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Contact -"
+        android:textAlignment="center"
+        android:textColor="#476AFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="420dp"
         android:fontFamily="@font/poppins_light"
-        android:text="Contact - \n+91 9628128323\n+91 8423871451\n\nWebsite - \nwww.ecellrgpv.com"
+        android:text="+91 8423871451\n+91 9628128323\nwww.ecellrgpv.com"
         android:textAlignment="center"
         android:textColor="#0FDD85"
         android:textSize="24sp"
@@ -39,15 +55,28 @@
         android:id="@+id/textView7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="35dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Email Us At -\n support@ecellrgpv.com"
+        android:layout_marginTop="110dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="Email Us At -"
         android:textAlignment="center"
-        android:textColor="#234BF8"
+        android:textColor="#476AFF"
         android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details" />
+
+    <TextView
+        android:id="@+id/emailtextsupport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:text="support@ecellrgpv.com"
+        android:textAlignment="center"
+        android:textColor="#0FDD85"
+        android:textSize="24sp"
+        android:textStyle="normal|bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
