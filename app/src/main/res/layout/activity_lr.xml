@@ -7,82 +7,81 @@
     android:background="@drawable/lrback"
     tools:context=".LrActivity">
 
-    <Button
-        android:id="@+id/log"
-        android:layout_width="340dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="440dp"
-        android:alpha=".8"
-        android:background="@drawable/lrbuttons"
-        android:drawableRight="@mipmap/loginicon"
-        android:fontFamily="@font/open_sans_condensed_bold"
-        android:foregroundGravity="center_vertical|center|center_horizontal"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:onClick="loginRedirect"
-        android:paddingEnd="15dp"
-        android:text="LOGIN"
-        android:textAlignment="center"
-        android:textColor="#9013FD"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.507"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/reg"
-        android:layout_width="340dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="580dp"
-        android:alpha=".8"
-        android:background="@drawable/lrbuttons"
-        android:drawableRight="@mipmap/regicon"
-        android:fontFamily="@font/open_sans_condensed_bold"
-        android:foregroundGravity="center_vertical|center|center_horizontal"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:onClick="regRedirect"
-        android:paddingEnd="15dp"
-        android:text="Register"
-        android:textAlignment="center"
-        android:textColor="#9013FD"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
-        android:alpha="1"
-        android:fontFamily="@font/poppins_light"
-        android:text="Hello There !!\nKindly, SignIn/SignUp"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
+    <FrameLayout
+        android:layout_width="370dp"
+        android:layout_height="700dp"
+        android:background="@drawable/regcardo"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lineHeight="40sp" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/mountain"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_marginTop="170dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/mountainelottie" />
+        <Button
+            android:id="@+id/log"
+            android:layout_width="320dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="400dp"
+            android:alpha=".8"
+            android:background="@drawable/lrbuttons"
+            android:drawableRight="@mipmap/loginicon"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:onClick="loginRedirect"
+            android:paddingEnd="15dp"
+            android:text="LOGIN"
+            android:textAlignment="center"
+            android:textColor="#9013FD"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/reg"
+            android:layout_width="320dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="535dp"
+            android:alpha=".8"
+            android:background="@drawable/lrbuttons"
+            android:drawableRight="@mipmap/regicon"
+            android:fontFamily="@font/open_sans_condensed_bold"
+            android:foregroundGravity="center_vertical|center|center_horizontal"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:onClick="regRedirect"
+            android:paddingEnd="15dp"
+            android:text="Register"
+            android:textAlignment="center"
+            android:textColor="#9013FD"
+            android:textSize="50sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:alpha="1"
+            android:fontFamily="@font/poppins_light"
+            android:text="Hello There !!\nKindly, SignIn/SignUp"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:lineHeight="40sp" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/mountain"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="140dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/mountainelottie" />
+
+    </FrameLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
