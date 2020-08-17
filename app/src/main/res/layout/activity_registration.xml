@@ -7,34 +7,52 @@
     android:background="@drawable/lrback"
     tools:context=".RegistrationActivity">
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/notfound"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:foregroundGravity="center"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:lottie_autoPlay="true"
-        android:scaleX="0.98"
-        app:lottie_loop="true"
-        app:lottie_rawRes="@raw/regnotfound" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
-        android:layout_marginBottom="128dp"
-        android:fontFamily="@font/poppins_light"
-        android:text="Sorry, you can't register directly\nas a class representative\nKindly, contact admin to\nregister yourself as a\nClass Representative for\nE - CELL RGPV !!"
-        android:textAlignment="center"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        android:textStyle="bold"
+    <FrameLayout
+        android:layout_width="380dp"
+        android:layout_height="700dp"
+        android:background="@drawable/regcardin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/notfound"
-        app:lineHeight="35dp" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/notfound"
+            android:layout_width="350dp"
+            android:layout_height="400dp"
+            android:layout_gravity="center_horizontal"
+            android:foregroundGravity="center"
+            android:scaleX="0.98"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/regnotfound" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="460dp"
+            android:fontFamily="@font/open_sans_semibold"
+            android:text="Sorry, you can't register directly\nas a class representative\nKindly, contact admin to\nregister yourself as a\nClass Representative\nfor E - CELL RGPV !!"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:lineHeight="28sp" />
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="675dp"
+            android:text="App Devlopment Department, E-CELL RGPV"
+            android:textAlignment="center"
+            android:textColor="#D50000" />
+
+    </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
