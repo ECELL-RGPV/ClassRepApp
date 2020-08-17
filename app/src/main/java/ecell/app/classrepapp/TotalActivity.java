@@ -57,7 +57,7 @@ public class TotalActivity extends AppCompatActivity {
                 View view = super.getView(position, convertView, parent);
                 TextView ListItemShow = (TextView) view.findViewById(android.R.id.text1);
                 ListItemShow.setTypeface(mTypeface);
-                ListItemShow.setTextColor(Color.parseColor("#0FDD85"));
+                ListItemShow.setTextColor(Color.parseColor("#ffffff"));
                 ListItemShow.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
                 return view;
             }

@@ -28,7 +28,7 @@
         android:gravity="center"
         android:text="ADD STUDENT DETAILS"
         android:textAlignment="center"
-        android:textColor="#FFF614"
+        android:textColor="@android:color/white"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/cardView"
