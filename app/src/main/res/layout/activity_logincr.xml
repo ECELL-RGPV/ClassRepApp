@@ -23,6 +23,7 @@
         app:lottie_rawRes="@raw/blobt" />
 
     <LinearLayout
+        android:id="@+id/linearLayout2"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
@@ -40,8 +41,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorBlack"
-            android:hint="Email Id">
+            android:hint="Email Id"
+            android:textColorHint="@color/colorBlack">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -54,8 +55,8 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/colorBlack"
             android:hint="Password"
+            android:textColorHint="@color/colorBlack"
             app:passwordToggleEnabled="true">
 
             <com.google.android.material.textfield.TextInputEditText
@@ -85,18 +86,19 @@
     <Button
         android:id="@+id/loginButton"
         android:layout_width="350dp"
-        android:layout_height="80dp"
-        android:layout_marginBottom="260dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="20dp"
         android:alpha="0.8"
         android:background="@drawable/lrbuttons"
+        android:elevation="10dp"
         android:fontFamily="@font/open_sans_condensed_bold"
         android:text="Signin As CR"
         android:textAlignment="center"
         android:textColor="#F8F7F7"
         android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

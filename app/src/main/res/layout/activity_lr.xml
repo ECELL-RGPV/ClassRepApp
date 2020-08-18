@@ -8,9 +8,11 @@
     tools:context=".LrActivity">
 
     <FrameLayout
-        android:layout_width="370dp"
+        android:layout_width="wrap_content"
         android:layout_height="700dp"
         android:background="@drawable/regcardo"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

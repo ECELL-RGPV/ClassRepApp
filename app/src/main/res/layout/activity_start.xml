@@ -39,7 +39,7 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/loadinganim"
-        app:lineHeight="23dp" />
+        app:lineHeight="25dp" />
 
     <TextView
         android:id="@+id/textView8"

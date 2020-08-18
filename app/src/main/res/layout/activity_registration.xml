@@ -9,9 +9,11 @@
 
 
     <FrameLayout
-        android:layout_width="380dp"
+        android:layout_width="wrap_content"
         android:layout_height="700dp"
         android:background="@drawable/regcardin"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
