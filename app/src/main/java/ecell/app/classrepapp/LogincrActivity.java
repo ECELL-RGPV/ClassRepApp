@@ -71,6 +71,7 @@ public class LogincrActivity extends AppCompatActivity {
                             FirebaseUser user = mAuth.getCurrentUser();
                             Intent intent = new Intent(LogincrActivity.this, MainActivity.class);
 //                            intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            // Code for Login 
                             dialog.dismiss();
                             startActivity(intent);
                             finish();
